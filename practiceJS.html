@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Tasks</title>
+</head>
+<body>
+
+<h2>Check Console for Output</h2>
+
+<script>
+
+// 1. Take a string number from prompt and convert it to number, then add 10
+// let num1 = prompt("Enter a number:");
+// num1 = Number(num1);
+// console.log("1. Result:", num1 + 10);
+
+// // 2. Take two numbers using prompt and print their sum
+// let a = Number(prompt("Enter first number:"));
+// let b = Number(prompt("Enter second number:"));
+// console.log("2. Sum:", a + b);
+
+
+//3. Take a user input value and print whether it becomes true or false
+// let value = prompt("Enter any value:");
+// console.log("3. Boolean value:", Boolean(value));
+
+
+ // 4. Convert "123" to number and multiply by 5
+// let num2 = Number("123");
+// console.log("4. Result:", num2 * 5);
+
+
+ // 5. Convert true and false into numbers
+// console.log("5. true to number:", Number(true));
+// console.log("5. false to number:", Number(false));
+
+
+ // 6. Take a string input and check if it becomes true or false
+// let str = prompt("Enter a string:");
+// console.log("6. Boolean result:", Boolean(str));
+
+
+ // 7. Convert "100" and "50" to numbers and find difference
+// let x = Number("100");
+// let y = Number("50");
+// console.log("7. Difference:", x - y);
+
+
+ // 8. Convert null, undefined and "" into numbers
+// console.log("8. null:", Number(null));
+// console.log("8. undefined:", Number(undefined));
+// console.log('8. "" :', Number(""));
+
+
+ // 9. Add "10" and 20 and explain why the result happens.(o/p: 1020)
+// console.log("9. Result:", "10" + 20);
+// console.log("Explanation: Because '10' is a string, JavaScript performs string concatenation.");
+
+
+ // 10. Convert "25" into number and check if greater than 20
+// let num3 = Number("25");
+// console.log("10. Is greater than 20:", num3 > 20);
+
+
+// If / Else Real-Time Tasks
+
+
+// 11. Ask user age and check if they are eligible to vote
+// let age = Number(prompt("Enter your age:"));
+// if (age >= 18) {
+//     console.log("11. Eligible to vote");
+// } else {
+//     console.log("11. Not eligible to vote");
+// }
+
+
+ // 12. Take a number and check if it is positive or negative
+// let num = Number(prompt("Enter a number:"));
+// if (num > 0) {
+//     console.log("12. Positive number");
+// } else if (num < 0) {
+//     console.log("12. Negative number");
+// } else {
+//     console.log("12. Zero");
+// }
+
+
+// 13. Check if a number is even or odd
+// let number = Number(prompt("Enter a number:"));
+// if (number % 2 === 0) {
+//     console.log("13. Even number");
+// } else {
+//     console.log("13. Odd number");
+// }
+
+
+// 14. Take 3 numbers and print the largest number
+// let n1 = Number(prompt("Enter first number:"));
+// let n2 = Number(prompt("Enter second number:"));
+// let n3 = Number(prompt("Enter third number:"));
+// if (n1 >= n2 && n1 >= n3) {
+//     console.log("14. Largest number:", n1);
+// } else if (n2 >= n1 && n2 >= n3) {
+//     console.log("14. Largest number:", n2);
+// } else {
+//     console.log("14. Largest number:", n3);
+// }
+
+
+ // 15. Ask user temperature
+// let temp = Number(prompt("Enter temperature:"));
+
+// if (temp > 35) {
+//     console.log("15. Hot day");
+// } else if (temp < 20) {
+//     console.log("15. Cold day");
+// } else {
+//     console.log("15. Normal weather");
+// }
+
+ // 16. Check if a student passed or failed (pass mark = 35)
+// let marks = Number(prompt("Enter marks:"));
+
+// if (marks >= 35) {
+//     console.log("16. Student Passed");
+// } else {
+//     console.log("16. Student Failed");
+// }
+
+
+// 17. Ask username and password and validate login
+// let username = prompt("Enter username:");
+// let password = prompt("Enter password:");
+
+// if (username === "admin" && password === "1234") {
+//     console.log("17. Login Successful");
+// } else {
+//     console.log("17. Invalid Username or Password");
+// }
+
+
+// 18. Check if a year is leap year
+// let year = Number(prompt("Enter a year:"));
+
+// if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+//     console.log("18. Leap Year");
+// } else {
+//     console.log("18. Not a Leap Year");
+// }
+
+
+ // 19. Ask user time (24 hours) and show part of day
+
+// let time = Number(prompt("Enter time (0-23):"));
+
+// if (time >= 5 && time < 12) {
+//     console.log("19. Morning");
+// } else if (time >= 12 && time < 17) {
+//     console.log("19. Afternoon");
+// } else if (time >= 17 && time < 21) {
+//     console.log("19. Evening");
+// } else {
+//     console.log("19. Night");
+// }
+
+
+// 20. Ask salary and calculate tax
+//let salary = Number(prompt("Enter salary:"));
+
+// if (salary >= 50000) {
+//     console.log("20. Tax:", salary * 0.20);
+// } else if (salary >= 30000) {
+//     console.log("20. Tax:", salary * 0.10);
+// } else {
+//     console.log("20. No tax");
+// }
+
+
+// 21. Print numbers 1 to 10 using for
+// for (let i = 1; i <= 10; i++) 
+//{
+//     console.log("21:", i);
+//}
+
+
+// 22. Print 10 to 1 countdown
+// for (let i = 10; i >= 1; i--) {
+//     console.log("22:", i);
+// }
+
+
+ // 23. Print even numbers from 1–50
+// for (let i = 1; i <= 50; i++) {
+//     if (i % 2 === 0) {
+//         console.log("23:", i);
+//     }
+// }
+
+
+// 24. Print odd numbers from 1–50
+// for (let i = 1; i <= 50; i++) {
+//     if (i % 2 !== 0) {
+//         console.log("24:", i);
+//     }
+// }
+
+
+// 25. Print multiplication table for a given number
+// let num = Number(prompt("Enter a number for table"));
+
+// for (let i = 1; i <= 10; i++) {
+//     console.log("25:", num + " x " + i + " = " + (num * i));
+// }
+
+
+// 26. Find sum of numbers from 1–100
+// let sum = 0;
+
+// for (let i = 1; i <= 100; i++) {
+//     sum += i;
+// }
+
+// console.log("26: Sum =", sum);
+
+
+// // 27. Find factorial of a number
+// let n = Number(prompt("Enter a number for factorial"));
+// let fact = 1;
+
+// for (let i = 1; i <= n; i++) {
+//     fact *= i;
+// }
+
+// console.log("27: Factorial =", fact);
+
+
+// 28. Count numbers between 1–100 divisible by 5
+// let count = 0;
+
+// for (let i = 1; i <= 100; i++) {
+//     if (i % 5 === 0) {
+//         count++;
+//     }
+// }
+
+// console.log("28: Numbers divisible by 5 =", count);
+
+
+ // 29. Print square of numbers from 1–10
+// for (let i = 1; i <= 10; i++) {
+//     console.log("29:", i * i);
+// }
+
+// 30. Reverse a number using loop
+// let num = prompt("Enter a number");
+// let reverse = "";
+
+// for (let i = num.length - 1; i >= 0; i--) {
+//     reverse = reverse + num[i];
+// }
+
+// console.log("Reversed number:", reverse);
+
+//  Array Tasks
+
+//31.Print all elements in array using for of.
+//["apple","banana","orange"]
+
+// let fruits = ["apple", "banana", "orange"];
+
+// for (let fruit of fruits) {
+//     console.log(fruit);
+// }
+
+//32.Count total elements in an array.
+
+// let arr = ["apple", "banana", "orange"];
+
+// console.log("Total elements:", arr.length);
+
+//33. Find largest number in array.
+
+// let arr = [5, 8, 11, 20];
+// let largest = arr[0];
+
+// for (let num of arr) {
+//     if (num > largest) {
+//         largest = num;
+//     }
+// }
+
+// console.log("Largest number:", largest);
+
+//34.Find sum of array numbers.
+// let arr = [5, 8, 11, 20];
+// let sum = 0;
+
+// for (let num of arr) {
+//     sum = sum + num;
+// }
+
+// console.log("Sum:", sum);
+
+
+// 35.Print only even numbers from array.
+
+// let arr = [2, 5, 8, 11, 20];
+
+// for (let num of arr) {
+//     if (num % 2 === 0) {
+//         console.log(num);
+//     }
+// }
+
+
+//  Object Tasks
+// 36. Print all keys and values from object using for in.
+
+// let person = {
+//     name: "Sheetal",
+//     age: 25,
+//     city: "Chennai"
+// };
+
+// for (let key in person) {
+//     console.log(key + ":", person[key]);
+// }
+
+
+// 37.Count how many properties are inside an object.
+// let person = {
+//     name: "Sheetal",
+//     age: 25,
+//     city: "Chennai"
+// };
+
+// let count = 0;
+
+// for (let key in person) {
+//     count++;
+// }
+
+// console.log("Total properties:", count);
+
+// 38. Check if object contains salary property.
+// let employee = {
+//     name: "Sheetal",
+//     age: 25,
+//     salary: 50000.
+   
+// };
+
+// if ("salary" in employee) {
+//     console.log("Salary property exists");
+// } else {
+//     console.log("Salary property not found");
+// }
+
+// 39. Print only values from object.
+
+// let person = {
+//     name: "Sheetal",
+//     age: 25,
+//     city: "Chennai"
+// };
+
+// for (let key in person) {
+//     console.log(person[key]);
+// }
+
+// 40. Create employee object and display employee details.
+
+// let employee = {
+//     name: "Sheetal",
+//     role: "Developer",
+//     salary: 60000,
+//     department: "IT"
+// };
+
+// for (let key in employee) {
+//     console.log(key + ":", employee[key]);
+// }
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

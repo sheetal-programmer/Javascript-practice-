@@ -1,0 +1,480 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions + ES6</title>
+</head>
+<body>
+    <h2>Check Console for Output</h2>
+
+    <script>
+
+        // 1. Create a function to print "Hello World"
+            function printHelloWorld() 
+            {
+                console.log("Hello World");
+            }
+                 printHelloWorld();
+
+
+// 2. Create a function that takes a name and prints:
+// Welcome <name>
+            function welcomeUser(name)
+            {
+                console.log("Welcome " + name);
+            }
+                welcomeUser("Sheetal");
+
+
+// 3. Create a function to add two numbers and return the result
+        function addNumbers(a, b) 
+        {
+            return a + b;
+        }
+        console.log(addNumbers(10, 20));
+
+
+// 4. Create a function to check whether a number is even or odd
+function checkEvenOdd(num) {
+    if (num % 2 === 0) {
+        return "Even";
+    } else {
+        return "Odd";
+    }
+}
+console.log(checkEvenOdd(7));
+
+
+ // 5. Create a function to find the square of a number
+function squareNumber(num) {
+    return num * num;
+}
+console.log(squareNumber(6));
+
+
+// // 6. Create a function to return the largest of three numbers
+function largestOfThree(a, b, c) {
+    if (a >= b && a >= c) {
+        return a;
+    } else if (b >= a && b >= c) {
+        return b;
+    } else {
+        return c;
+    }
+}
+console.log(largestOfThree(12, 45, 30));
+
+
+ // 7. Create a function with a default parameter (age = 18)
+function showAge(age = 18) {
+    return age;
+}
+console.log(showAge());
+console.log(showAge(28));
+
+
+// // 8. Create a function that returns full name (first name + last name)
+function fullName(firstName, lastName) {
+    return firstName + " " + lastName;
+}
+console.log(fullName("Sheetal", "Dhanraj"));
+
+
+
+// 9. Create a function that returns the multiplication of three numbers
+function multiplyThreeNumbers(a, b, c) {
+    return a * b * c;
+}
+console.log(multiplyThreeNumbers(2, 3, 4));
+
+
+ // 10. Write a function to demonstrate the difference between:
+ // var
+ // let
+ // const
+function showVarLetConst() {
+    var a = 10;
+    let b = 20;
+    const c = 30;
+
+    console.log("var:", a);
+    console.log("let:", b);
+    console.log("const:", c);
+}
+showVarLetConst();
+
+
+// 11. Create a nested function (function inside another function)
+function outerFunction() {
+    function innerFunction() {
+        return "This is inner function";
+    }
+    return innerFunction();
+}
+console.log(outerFunction());
+
+
+ // 12. Create a global variable and access it inside a function
+let globalValue = "I am a global variable";
+
+function accessGlobalVariable() {
+    console.log(globalValue);
+}
+accessGlobalVariable();
+
+
+ // 13. Try accessing a block-scoped variable outside the block and observe the result
+
+function blockScopeDemo() {
+    {
+        let message = "Inside block";
+        console.log(message);
+    }
+
+    console.log(message);
+}
+
+blockScopeDemo();
+
+
+ // 14. Demonstrate hoisting behavior using:
+ // var
+ // let
+
+function hoistingDemo() {
+    console.log(a); 
+    var a = 10;
+
+    console.log(b); 
+    let b = 20;
+}
+
+hoistingDemo();
+
+//Output:Uncaught ReferenceError: Cannot access 'b' before initialization at hoistingDemo
+
+
+
+// 15. Convert a normal function into an anonymous function
+let greet = function () {
+    console.log("Hello from anonymous function");
+};
+greet();
+
+
+// // 16. Convert a normal function into an arrow function
+let welcome = () => {
+    console.log("Hello from arrow function");
+};
+welcome();
+
+
+// // 17. Create an arrow function with single-line return
+let add = (a, b) => a + b;
+console.log(add(5, 3));
+
+
+ // 18. Create a function expression and call it
+let multiply = function (a, b) {
+    return a * b;
+};
+console.log(multiply(4, 5));
+
+
+// 19. Compare normal function vs arrow function using this
+let obj = {
+    name: "Sheetal",
+
+    normalFunction: function () {
+        console.log(this.name);
+    },
+
+    arrowFunction: () => {
+        console.log(this.name);
+    }
+};
+
+obj.normalFunction();
+obj.arrowFunction();
+
+
+ // 20. Create an IIFE (Immediately Invoked Function Expression) to print:
+// Executed immediately
+(function () 
+{
+    console.log("Executed immediately");
+})();
+
+
+// 21. Create a function that accepts another function as an argument and executes it
+function runMe(callback) {
+  callback();
+}
+
+runMe(() => console.log("Function executed!"));
+// // Output: Function executed!
+
+
+ // 22. Build a calculator using callback functions (add, sub, mul)
+const add = (a, b) => a + b;
+const sub = (a, b) => a - b;
+const mul = (a, b) => a * b;
+
+function calculator(num1, num2, operation) {
+  return operation(num1, num2);
+}
+
+console.log(calculator(5, 3, add)); 
+console.log(calculator(10, 4, sub));
+console.log(calculator(6, 2, mul));
+
+// Output: 8
+// Output: 6
+// Output: 12
+
+
+// 23. Pass a function as an argument and print a custom message
+function displayMessage(formatFn) {
+  console.log(formatFn("Welcome to Javascript!"));
+}
+
+displayMessage((msg) => `Message: ${msg}`);
+// Output: Message: Welcome to Javascript!
+
+
+// 24. Create a function that delays execution using a callback (simulate setTimeout)
+function delayedGreeting(callback) {
+  setTimeout(callback, 2000); // Delays for 2 seconds
+}
+
+delayedGreeting(() => console.log("Hello after 2 seconds!"));
+// Output (after 2s): Hello after 2 seconds!
+
+
+// 25. Create a custom map function using callback
+function customMap(array, callback) {
+  const result = [];
+  for (let i = 0; i < array.length; i++) {
+    result.push(callback(array[i]));
+  }
+  return result;
+}
+
+const numbers = [1, 2, 3];
+const doubled = customMap(numbers, (num) => num * 2);
+console.log(doubled);
+// Output: [2, 4, 6]
+
+
+
+// 26. Convert a function: add(a, b, c) into currying format: add(a)(b)(c)
+function addCurry(a) {
+  return function(b) {
+    return function(c) {
+      return a + b + c;
+    };
+  };
+}
+
+console.log(addCurry(1)(2)(3));
+// Output: 6
+
+
+// 27. Create a multiply function using currying
+const multiply = (a) => (b) => a * b;
+
+console.log(multiply(5)(4));
+// Output: 20
+
+
+// 28. Create a greeting function using currying 
+// greet("Hello")("John")("Good Morning")
+const greet = (greeting) => (name) => (timeOfDay) => {
+  return `${greeting}, ${name}! ${timeOfDay}`;
+};
+
+console.log(greet("Hello")("John")("Good Morning"));
+// Output: Hello, John! Good Morning
+
+
+
+// 29. Create a generator function that yields 3 messages
+function* messageGenerator() {
+  yield "First message";
+  yield "Second message";
+  yield "Third message";
+}
+
+const gen = messageGenerator();
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
+// Output: First message
+// Output: Second message
+// Output: Third message
+
+
+// 30. Iterate a generator using for...of
+function* countToThree() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+for (const val of countToThree()) {
+  console.log(val);
+}
+// Output: 1
+// Output: 2
+// Output: 3
+
+
+// 31. Create an infinite generator that produces numbers (1, 2, 3...)
+function* infiniteNumbers() {
+  let n = 1;
+  while (true) {
+    yield n++;
+  }
+}
+
+const numGen = infiniteNumbers();
+console.log(numGen.next().value);
+console.log(numGen.next().value);
+console.log(numGen.next().value);
+console.log(numGen.next().value);
+console.log(numGen.next().value);
+console.log(numGen.next().value);
+console.log(numGen.next().value);
+console.log(numGen.next().value);
+console.log(numGen.next().value);
+console.log(numGen.next().value);
+
+
+// 32. Merge two arrays using spread operator
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+const mergedArr = [...arr1, ...arr2];
+
+console.log(mergedArr);
+// Output: [1, 2, 3, 4]
+
+
+// 33. Clone an object and modify one property
+const originalUser = { name: "Alice", age: 25 };
+const updatedUser = { ...originalUser, age: 26 };
+
+console.log(updatedUser);
+// Output: { name: "Alice", age: 26 }
+
+
+// 34. Merge multiple arrays and add extra values using spread
+const fruits = ["apple", "banana"];
+const veggies = ["carrot"];
+const groceryList = ["bread", ...fruits, ...veggies, "milk"];
+
+console.log(groceryList);
+// Output: ["bread", "apple", "banana", "carrot", "milk"]
+
+
+
+// 35. Create a function that accepts unlimited arguments and returns the sum
+function sumAll(...numbers) {
+  return numbers.reduce((total, num) => total + num, 0);
+}
+
+console.log(sumAll(10, 20, 30, 40));
+// Output: 100
+
+
+// 36. Store extra arguments using rest operator and print them
+function listFavorites(first, second, ...others) {
+  console.log("Top 2:", first, second);
+  console.log("Others:", others);
+}
+
+listFavorites("Pizza", "Sushi", "Tacos", "Pasta", "Burgers");
+// Output: Top 2: Pizza Sushi
+// Output: Others: ["Tacos", "Pasta", "Burgers"]
+
+
+// 37. Create a function to find the maximum value using rest operator
+function findMax(...vals) {
+  return Math.max(...vals); 
+}
+
+console.log(findMax(5, 82, 14, 9));
+// Output: 82
+
+
+// 38. Create a switch case to print day name (1-7)
+function getDayName(dayNum) {
+  switch (dayNum) {
+    case 1: return "Monday";
+    case 2: return "Tuesday";
+    case 3: return "Wednesday";
+    case 4: return "Thursday";
+    case 5: return "Friday";
+    case 6: return "Saturday";
+    case 7: return "Sunday";
+    default: return "Invalid Day";
+  }
+}
+
+console.log(getDayName(3));
+// Output: Wednesday
+
+
+// 39. Create a calculator using switch case (+, -, *, /)
+function simpleCalc(a, b, operator) {
+  switch (operator) {
+    case '+': return a + b;
+    case '-': return a - b;
+    case '*': return a * b;
+    case '/': return b !== 0 ? a / b : "Cannot divide by zero";
+    default: return "Unknown Operator";
+  }
+}
+
+console.log(simpleCalc(10, 5, '*'));
+console.log(simpleCalc(20, 4, '/'));
+
+// Output: 50
+// Output: 5
+
+// 40. Create a grade system using switch or conditions:
+// 90+ -> A, 75+ -> B, 50+ -> C, Below 50 -> Fail
+
+function getGrade(score) {
+  if (score >= 90) {
+    return "A";
+  } else if (score >= 75) {
+    return "B";
+  } else if (score >= 50) {
+    return "C";
+  } else {
+    return "Fail";
+  }
+}
+
+console.log(getGrade(95));
+console.log(getGrade(82));
+console.log(getGrade(60));
+console.log(getGrade(45));
+
+// Output: A
+// Output: B
+// Output: C
+// Output: Fail
+
+
+
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,472 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 + Array Practice Tasks</title>
+</head>
+<body>
+
+    <h2>Check Console for Output</h2>
+
+    <script>
+
+        // 1. Merge two arrays [10,20] and [30,40] using spread and add 50 at the end.
+        // let arr1 = [10, 20];
+        // let arr2 = [30, 40];
+        // let merged = [...arr1, ...arr2, 50];
+        // console.log(merged);
+        // Output: [10, 20, 30, 40, 50]
+
+
+// 2. Clone an array [1,2,3] and modify the clone without affecting the original.
+// let original = [1, 2, 3];
+// let clone = [...original];
+// clone.push(4);
+// console.log(original);
+// console.log(clone);
+// Output:
+// [1, 2, 3]
+// [1, 2, 3, 4]
+
+
+// 3. Merge two objects where both have a salary key — observe which value overrides.
+// let obj1 = { name: "A", salary: 1000 };
+// let obj2 = { salary: 2000 };
+// let mergedObj = { ...obj1, ...obj2 };
+// console.log(mergedObj);
+//  Output: { name: 'A', salary: 2000 }
+
+
+// 4. Create a function that accepts unlimited numbers using rest and returns their sum.
+// function sum(...nums) {
+//   return nums.reduce((a, b) => a + b, 0);
+// }
+// console.log(sum(1, 2, 3, 4));
+// Output: 10
+
+
+// 5. Create a function that takes first two parameters separately and rest as an array — print only rest values.
+// function restValues(a, b, ...rest) {
+//   console.log(rest);
+// }
+// restValues(1, 2, 3, 4, 5);
+// Output: [3, 4, 5]
+
+
+// 6. Extract first and last value from [5,10,15,20] using destructuring.
+// let arr = [5, 10, 15, 20];
+// let [first, , , last] = arr;
+// console.log(first, last);
+// Output: 5 20
+
+
+// 7. Swap two variables using destructuring.
+// let x = 10, y = 20;
+// [x, y] = [y, x];
+// console.log(x, y);
+// Output: 20 10
+
+
+// 8. From nested array [1,[2,[3,[4]]]], extract value 4.
+// let nested = [1, [2, [3, [4]]]];
+// let [, [, [, [value]]]] = nested;
+// console.log(value);
+// Output: 4
+
+
+// 9. Destructure object {name:"Sheetal", age:25} and rename variables (name → userName).
+// let person = { name: "Sheetal", age: 25 };
+// let { name: userName, age } = person;
+// console.log(userName, age);
+// Output: Sheetal 25
+
+
+// 10. Set default value while destructuring when property is missing.
+// let user = { name: "Shashank" };
+// let { name: n, age: a = 18 } = user;
+// console.log(n, a);
+// Output: Shashank 18
+
+
+// 11. Add values [6,7] to [1,2,3,4,5] using push.
+// let arrPush = [1, 2, 3, 4, 5];
+// arrPush.push(6, 7);
+// console.log(arrPush);
+// Output: [1, 2, 3, 4, 5, 6, 7]
+
+
+// 12. Remove last element and store it in a variable.
+// let arrPop = [1, 2, 3, 4, 5];
+// let lastElement = arrPop.pop();
+// console.log(lastElement);
+// console.log(arrPop);
+// Output:
+// 5
+// [1, 2, 3, 4]
+
+
+// 13. Remove first element and log remaining array.
+// let arrShift = [1, 2, 3, 4, 5];
+// arrShift.shift();
+// console.log(arrShift);
+// Output: [2, 3, 4, 5]
+
+
+// 14. Add element at beginning using unshift.
+// let arrUnshift = [2, 3, 4];
+// arrUnshift.unshift(1);
+// console.log(arrUnshift);
+// Output: [1, 2, 3, 4]
+
+
+// 15. Use splice() to remove middle elements from [1,2,3,4,5,6].
+// let arrSplice = [1, 2, 3, 4, 5, 6];
+// arrSplice.splice(2, 2); // remove 3 and 4
+// console.log(arrSplice);
+// Output: [1, 2, 5, 6]
+
+
+// 16. Extract [4000,5000,6000] using slice().
+// let arr16 = [1000, 2000, 3000, 4000, 5000, 6000, 7000];
+// let result16 = arr16.slice(3, 6);
+// console.log(result16);
+// Output: [4000, 5000, 6000]
+
+
+// 17. Replace elements in an array using splice().
+// let arr17 = [1, 2, 3, 4, 5];
+// arr17.splice(2, 2, 99, 100); // replace 3,4
+// console.log(arr17);
+// Output: [1, 2, 99, 100, 5]
+
+
+// 18. Flatten [1,[2,[3,[4]]]] completely.
+// let arr18 = [1, [2, [3, [4]]]];
+// let flat18 = arr18.flat(Infinity);
+// console.log(flat18);
+
+
+// 19. Flatten only one level of nested array.
+// let arr19 = [1, [2, [3, 4]]];
+// let flat19 = arr19.flat(1);
+// console.log(flat19);
+// Output: [1, 2, [3, 4]]
+
+
+// 20. Insert values without deleting using splice().
+// let arr20 = [1, 2, 5];
+// arr20.splice(2, 0, 3, 4); // insert at index 2
+// console.log(arr20);
+// Output: [1, 2, 3, 4, 5]
+
+
+// 21. Check if value 100 exists in an array.
+// let arr21 = [10, 20, 100, 40];
+// console.log(arr21.includes(100));
+// Output: true
+
+
+// 22. Find index of value 3 starting from index 2.
+// let arr22 = [1, 2, 3, 4, 3];
+// let index22 = arr22.indexOf(3, 2);
+// console.log(index22);
+// Output: 2
+
+
+// 23. Find last occurrence of 5 in [1,5,3,5,2].
+// let arr23 = [1, 5, 3, 5, 2];
+// console.log(arr23.lastIndexOf(5));
+// Output: 3
+
+
+// 24. Check if all values are positive using every().
+// let arr24 = [1, 2, 3, 4];
+// let allPositive = arr24.every(num => num > 0);
+// console.log(allPositive);
+// Output: true
+
+
+// 25. Check if any value is greater than 50 using some().
+// let arr25 = [10, 20, 60, 30];
+// let hasGreater = arr25.some(num => num > 50);
+// console.log(hasGreater);
+// Output: true
+
+
+// 26. Sort [10,5,100,1] in ascending order correctly.
+// let arr26 = [10, 5, 100, 1];
+// arr26.sort((a, b) => a - b);
+// console.log(arr26);
+Output: [1, 5, 10, 100]
+
+
+// 27. Sort array of numbers in descending order.
+// let arr27 = [10, 5, 100, 1];
+// arr27.sort((a, b) => b - a);
+// console.log(arr27);
+// Output: [100, 10, 5, 1]
+
+
+// 28. Sort array of objects by salary.
+// let employees = [
+//   { name: "A", salary: 3000 },
+//   { name: "B", salary: 1000 },
+//   { name: "C", salary: 2000 }
+// ];
+// employees.sort((a, b) => a.salary - b.salary);
+// console.log(employees);
+// Output:
+// [
+//   { name: 'B', salary: 1000 },
+//   { name: 'C', salary: 2000 },
+//   { name: 'A', salary: 3000 }
+// ]
+
+
+// 29. Reverse a sorted array.
+// let arr29 = [1, 2, 3, 4];
+// arr29.reverse();
+// console.log(arr29);
+// Output: [4, 3, 2, 1]
+
+
+// 30. Identify why default sort() fails for numbers.
+// let arr30 = [10, 5, 100, 1];
+// arr30.sort();
+// console.log(arr30);
+// Output: [1, 10, 100, 5]
+
+// Reason:
+// sort() converts numbers to strings and compares lexicographically
+// (like dictionary order), not numerical order.
+
+
+// 31. Print all elements of an array using forEach().
+// let arr31 = [1, 2, 3];
+// arr31.forEach(num => console.log(num));
+// Output:
+// 1
+// 2
+// 3
+
+
+// 32. Try returning value from forEach() — observe result.
+// let arr32 = [1, 2, 3];
+// let result32 = arr32.forEach(num => num * 2);
+// console.log(result32);
+// Output: undefined
+// (forEach does not return anything)
+
+
+// 33. Convert [1,2,3] into [2,4,6].
+// let arr33 = [1, 2, 3];
+// let result33 = arr33.map(num => num * 2);
+// console.log(result33);
+// Output: [2, 4, 6]
+
+
+// 34. Convert array of names to uppercase.
+// let names = ["john", "sam", "alex"];
+// let upperNames = names.map(name => name.toUpperCase());
+// console.log(upperNames);
+// Output: ["JOHN", "SAM", "ALEX"]
+
+
+// 35. Extract only salary from employee objects.
+// let emp35 = [
+//   { name: "A", salary: 1000 },
+//   { name: "B", salary: 2000 }
+// ];
+// let salaries = emp35.map(emp => emp.salary);
+// console.log(salaries);
+// Output: [1000, 2000]
+
+
+// 36. Filter employees with salary > 300000.
+// let emp36 = [
+//   { name: "A", salary: 250000 },
+//   { name: "B", salary: 350000 }
+// ];
+// let highSalary = emp36.filter(emp => emp.salary > 300000);
+// console.log(highSalary);
+// Output: [{ name: "B", salary: 350000 }]
+
+
+// 37. Get even numbers from an array.
+// let arr37 = [1, 2, 3, 4, 5, 6];
+// let even = arr37.filter(num => num % 2 === 0);
+// console.log(even);
+// Output: [2, 4, 6]
+
+
+// 38. Filter strings with length > 5.
+// let arr38 = ["apple", "banana", "grapes", "kiwi"];
+// let longStrings = arr38.filter(str => str.length > 5);
+// console.log(longStrings);
+// Output: ["banana", "grapes"]
+
+
+// 39. Find first number greater than 50.
+// let arr39 = [10, 20, 60, 30];
+// let found39 = arr39.find(num => num > 50);
+// console.log(found39);
+// Output: 60
+
+
+// 40. Find first employee with salary < 200000.
+// let emp40 = [
+//   { name: "A", salary: 250000 },
+//   { name: "B", salary: 150000 }
+// ];
+// let lowSalaryEmp = emp40.find(emp => emp.salary < 200000);
+// console.log(lowSalaryEmp);
+// Output: { name: "B", salary: 150000 }
+
+
+// 41. Find total sum of [10,20,30].
+// let arr41 = [10, 20, 30];
+// let sum41 = arr41.reduce((acc, curr) => acc + curr, 0);
+// console.log(sum41);
+// Output: 60
+
+
+// 42. Find maximum number using reduce.
+// let arr42 = [10, 50, 20, 80, 30];
+// let max = arr42.reduce((acc, curr) => (curr > acc ? curr : acc));
+// console.log(max);
+// Output: 80
+
+
+// 43. Count total number of elements.
+// let arr43 = [1, 2, 3, 4];
+// let count = arr43.reduce(acc => acc + 1, 0);
+// console.log(count);
+// Output: 4
+
+
+// 44. Convert array into object using reduce.
+// let arr44 = ["a", "b", "c"];
+// let obj44 = arr44.reduce((acc, curr, index) => {
+//   acc[index] = curr;
+//   return acc;
+// }, {});
+// console.log(obj44);
+// Output: {0: "a", 1: "b", 2: "c"}
+
+
+// 45. Calculate total salary of employees.
+// let emp45 = [
+//   { name: "A", salary: 1000 },
+//   { name: "B", salary: 2000 }
+// ];
+// let totalSalary = emp45.reduce((acc, emp) => acc + emp.salary, 0);
+// console.log(totalSalary);
+// Output: 3000
+
+
+// 46. Convert array [1,2,3] into string using toString().
+// let arr46 = [1, 2, 3];
+// let str46 = arr46.toString();
+// console.log(str46);
+// Output: "1,2,3"
+
+
+// 47. Join array with " - " separator.
+// let arr47 = [1, 2, 3];
+// let str47 = arr47.join(" - ");
+// console.log(str47);
+// Output: "1 - 2 - 3"
+
+
+// 48. Convert string "1,2,3" into array.
+// let str48 = "1,2,3";
+// let arr48 = str48.split(",");
+// console.log(arr48);
+// Output: ["1", "2", "3"]
+
+
+// 49. Convert nested array into flat string.
+// let arr49 = [1, [2, 3], [4, 5]];
+// let str49 = arr49.flat().join(",");
+// console.log(str49);
+// Output: "1,2,3,4,5"
+
+
+// 50. Combine map + join to create sentence from words.
+// let words = ["hello", "world"];
+// let sentence = words.map(w => w.toUpperCase()).join(" ");
+// console.log(sentence);
+// Output: "HELLO WORLD"
+
+
+// 51. Build a mini cart total calculator using reduce().
+// let cart = [
+//   { item: "A", price: 100, qty: 2 },
+//   { item: "B", price: 50, qty: 3 }
+// ];
+// let total = cart.reduce((acc, prod) => acc + (prod.price * prod.qty), 0);
+// console.log(total);
+// Output: 350
+
+
+// 52. Filter products under ₹500.
+// let products = [
+//   { name: "Pen", price: 20 },
+//   { name: "Shoes", price: 1000 },
+//   { name: "Bag", price: 400 }
+// ];
+// let cheapProducts = products.filter(p => p.price < 500);
+// console.log(cheapProducts);
+// Output:
+// [
+//   { name: "Pen", price: 20 },
+//   { name: "Bag", price: 400 }
+// ]
+
+
+// 53. Create search functionality using filter().
+// let items = ["apple", "banana", "grapes"];
+// let search = "ap";
+// let result53 = items.filter(item => item.includes(search));
+// console.log(result53);
+// Output: ["apple", "grapes"]
+
+
+// 54. Remove duplicates from array.
+// let arr54 = [1, 2, 2, 3, 4, 4];
+// let unique = [...new Set(arr54)];
+// console.log(unique);
+// Output: [1, 2, 3, 4]
+
+
+// 55. Group employees by salary range.
+// let emp55 = [
+//   { name: "A", salary: 10000 },
+//   { name: "B", salary: 30000 },
+//   { name: "C", salary: 70000 }
+// ];
+
+// let grouped = emp55.reduce((acc, emp) => {
+//   let key = emp.salary < 30000 ? "Low" :
+//             emp.salary < 60000 ? "Medium" : "High";
+  
+//   if (!acc[key]) acc[key] = [];
+//   acc[key].push(emp);
+  
+//   return acc;
+// }, {});
+
+// console.log(grouped);
+// Output:
+// {
+//   Low: [{ name: "A", salary: 10000 }],
+//   Medium: [{ name: "B", salary: 30000 }],
+//   High: [{ name: "C", salary: 70000 }]
+// }
+
+
+    </script>
+
+    
+</body>
+</html>

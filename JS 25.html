@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript task</title>
+</head>
+<body>
+
+    <h2>Check Console for Output</h2>
+
+    <script>
+
+        // Task 1: Username Formatter
+        // let username = " sheetal dhanraj ";
+        // let result = username.trim().toUpperCase().replace(" ", "_");
+        // console.log(result); 
+        // SHEETAL_DHANRAJ
+
+
+        // Task 2: Email Validator (Basic)
+        // let email = "test@gmail.com";
+        // if (email.includes("@") && email.endsWith(".com")) {
+        // console.log("Valid Email");
+        // } else {
+        // console.log("Invalid Email");
+        // }
+        // Output: Valid Email
+
+
+        // Task 3: Word Counter
+        // let sentence = "javascript is very powerful language";
+        // let words = sentence.split(" ");
+        // let count = words.length;
+        // console.log(count); 
+        // 5
+
+       
+        // Task 4:  Replace Second Word Only
+        // let text = "python python developer";
+
+        // let words = text.split(" ");
+        // words[1] = "javascript";
+
+        // let result = words.join(" ");
+
+        // console.log(result);
+
+        // Output: python javascript developer
+
+        // Task 4: Replace Second Word Only
+            // let text = "python python developer";
+            // let words = text.split(" ");
+            // words[1] = "javascript";
+            // let result = words.join(" ");
+            // console.log(result); 
+            // python javascript developer
+
+
+            // Task 5: Password Strength Checker
+            // let password = "Abcd1234";
+
+            // let hasUpper = /[A-Z]/.test(password);
+            // let hasLower = /[a-z]/.test(password);
+            // let hasNumber = /[0-9]/.test(password);
+
+            // if (password.length >= 8 && hasUpper && hasLower && hasNumber) {
+            // console.log("Strong");
+            // } else {
+            // console.log("Weak");
+            // }
+            // Output: Strong
+
+
+            // Task 6: Reverse a String
+            // let str = "hello";
+            // let reversed = str.split("").reverse().join("");
+            // console.log(reversed); 
+
+            // olleh
+
+            // Task 7: Find Day of Birth (Improved)
+            // let year = 2001;
+            // let month = 11;
+            // let day = 24;
+
+            // if (month >= 1 && month <= 12 && day >= 1 && day <= 31) {
+            // let dob = new Date(year, month - 1, day);
+
+            // let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+            // console.log("Task 7 Output:", "You were born on " + days[dob.getDay()]);
+            // } else {
+            // console.log("Task 7 Output: Invalid Date");
+            // }
+
+
+            // Task 8: Live Digital Clock
+            // setInterval(() => {
+            // let now = new Date();
+
+            // let hours = now.getHours();
+            // let minutes = now.getMinutes();
+            // let seconds = now.getSeconds();
+
+            // console.log("Task 8 Output:", hours + ":" + minutes + ":" + seconds);
+            // }, 1000);
+
+
+            // Task 9: Date Difference Calculator
+            // let date1 = new Date("2026-03-20");
+            // let date2 = new Date("2026-03-27");
+
+            // let diffTime = date2 - date1;
+            // let diffDays = diffTime / (1000 * 60 * 60 * 24);
+
+            // console.log("Task 9 Output:", diffDays);
+
+
+            // Task 10: Character Frequency Counter
+                //  let str = "javascript";
+                // let obj = {};
+
+                // for (let i = 0; i < str.length; i++) {
+                // let ch = str[i];
+
+                // if (obj[ch]) {
+                //     obj[ch] = obj[ch] + 1;
+                // } else {
+                //     obj[ch] = 1;
+                // }
+                // }
+
+                // console.log(obj);
+
+
+
+    </script>
+    
+</body>
+</html>

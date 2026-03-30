@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Listing Dashboard</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🛍 Product Listing Dashboard</h1>
+    <p>Real-Time API Project</p>
+  </header>
+
+  <!-- Controls -->
+  <section class="controls">
+    <input type="text" id="searchInput" placeholder="Search products..." />
+
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="electronics">electronics</option>
+      <option value="jewelery">jewelery</option>
+      <option value="men's clothing">men's clothing</option>
+      <option value="women's clothing">women's clothing</option>
+    </select>
+
+    <button id="lowToHigh">Sort Low → High</button>
+    <button id="highToLow">Sort High → Low</button>
+  </section>
+
+  <!-- Loader -->
+  <p id="loader">Loading...</p>
+
+  <!-- Error -->
+  <p id="errorMessage"></p>
+
+  <!-- Product Container -->
+  <section id="productContainer" class="product-container"></section>
+
+  <!-- Modal -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <div id="modalDetails"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
